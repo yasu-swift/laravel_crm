@@ -1,0 +1,7 @@
+.error {
+    color: red;
+}
+.button{
+    display: inline-flex;
+    flex-direction: column;
+}

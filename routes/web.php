@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/customers/search', function () {
+//     return view('customers.search');
+// });
+Route::get('/customers/search', [CustomerController::class, 'search']);
+
+Route::resource('customers', CustomerController::class);
+// Route::get('/customers/search', [App\Http\Controllers\CustomerController::class, 'search']);
+
+// Route::resource('/customers', App\Http\Controllers\ZipcodeController::class);
