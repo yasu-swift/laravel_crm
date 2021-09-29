@@ -24,5 +24,5 @@
     </table>
 
     <!-- 新規登録画面へジャンプする -->
-    <input type="button" onclick="location.href='/customers/search'" value="新規作成">
+    <input type="button" onclick="location.href='{{ route('customers.search') }}'" value="新規作成">
 @endsection

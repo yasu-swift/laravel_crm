@@ -40,5 +40,5 @@
             <input type="submit" value="登録する">
         </div>
     </form>
-    <input type="button" onclick="location.href='/customers'" value="一覧画面">
+    <input type="button" onclick="location.href='{{ route('customers.index') }}'" value="一覧画面">
 @endsection

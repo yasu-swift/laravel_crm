@@ -43,5 +43,5 @@
             <input type="submit" value="更新">
         </div>
     </form>
-    <input type="button" onclick="location.href='/customers'" value="戻る">
+    <input type="button" onclick="location.href='{{ route('customers.index') }}'" value="戻る">
 @endsection

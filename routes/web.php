@@ -17,13 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-// Route::get('/customers/search', function () {
-//     return view('customers.search');
-// });
-Route::get('/customers/search', [CustomerController::class, 'search']);
+// route:listにnameを追加したらroute飛べるようになった
+Route::get('/customers/search', [CustomerController::class, 'search'])->name('customers.search');
 
 Route::resource('customers', CustomerController::class);
-// Route::get('/customers/search', [App\Http\Controllers\CustomerController::class, 'search']);
-
-// Route::resource('/customers', App\Http\Controllers\ZipcodeController::class);

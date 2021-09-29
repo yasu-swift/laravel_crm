@@ -20,13 +20,12 @@
             <td>{{ $customer->phone }}</td>
         </tr>
     </table>
-    <div class="button">
-        <input type="button" value="編集画面" onclick="location.href='/customers/{{ $customer->id }}/edit'">
-        <form action="{{ route('customers.destroy', $customer) }}" method="post" name="form1" style="display: inline">
-            @csrf
-            @method('delete')
-            <button type="submit" onclick="if(!confirm('削除していいですか?')){return false}">削除する</button>
-        </form>
-        <input type="button" onclick="location.href='/customers'" value="一覧に戻る">
-    </div>
+    
+    <button onclick="location.href='{{ route('customers.edit', $customer) }}'">編集画面</button>
+    <form action="{{ route('customers.destroy', $customer) }}" method="post">
+        @csrf
+        @method('delete')
+        <button type="submit" onclick="if(!confirm('削除していいですか?')){return false}">削除する</button>
+    </form>
+    <button onclick="location.href='{{ route('customers.index') }}'">一覧へ戻る</button>
 @endsection
